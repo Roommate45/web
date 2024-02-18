@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Combg.png'); /* เปลี่ยน  เป็นที่อยู่ของภาพที่คุณต้องการใช้ */
+            background-color: #000000;
+            background-size: cover; /* ปรับขนาดภาพให้ครอบคลุมพื้นที่ของหน้าเว็บ */
+            background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำซ้อน */
+            background-position: 12; /* จัดภาพให้อยู่ตรงกลาง */
+            width: 1280px; /* กำหนดความกว้างของหน้าเว็บ */
+            height: 800px; /* กำหนดความสูงของหน้าเว็บ */
+            position: relative; /* เพื่อให้สามารถใช้งาน position: absolute; ในส่วนของช่องกรอกข้อมูล */
+
+        }  img {
+            width: 1500px; /* ปรับขนาดของรูปภาพ */
+            height: auto; /* รักษาอัตราส่วนของรูปภาพ */
+            display: block; /* ทำให้รูปภาพแสดงเป็นบล็อก */
+            position: absolute;
+            bottom: -170px; /* ระยะห่างของรูปภาพ */
+            left: 40px; /* ระยะห่างของรูปภาพทางขวา */
+        }
+            label, input[type="Email"], input[type="text"], input[type="submit"] {
+        display: block;    
+        }
+        input[type="text"] {
+            display: block; /* แสดงช่องกรอกข้อมูล */
+            width: 29%; /* กำหนดความกว้างเต็มของพื้นที่ที่ใช้แสดงช่องกรอกข้อมูล */
+            padding: 24px; /* ปรับขนาด padding */
+            margin-bottom: 10px; /* ระยะห่างของช่องกรอกข้อมูล */
+            border-radius: 50px; /* ทำให้มีเส้นโค้งรอบขอบ */
+            border: 1px solid #ccc ; /* เส้นขอบ */
+            background-color: #fafafa; /* สีพื้นหลังของช่องกรอกข้อมูล */
+            position: absolute;
+            left: 208px;
+            bottom: 272px;
+            
+        }
+        input[type="Email"] {
+            display: block; /* แสดงช่องกรอกข้อมูล */
+            width: 29%; /* กำหนดความกว้างเต็มของพื้นที่ที่ใช้แสดงช่องกรอกข้อมูล */
+            padding: 24px; /* ปรับขนาด padding */
+            margin-bottom: 10px; /* ระยะห่างของช่องกรอกข้อมูล */
+            border-radius: 50px; /* ทำให้มีเส้นโค้งรอบขอบ */
+            border: 1px solid #ccc ; /* เส้นขอบ */
+            background-color: #fafafa; /* สีพื้นหลังของช่องกรอกข้อมูล */
+            position: absolute;
+            left: 208px;
+            bottom: 109px;
+        }
+        input[type="submit"] {
+            display: block; /* แสดงช่องกรอกข้อมูล */
+            width: 33.2%; /* กำหนดความกว้างเต็มของพื้นที่ที่ใช้แสดงช่องกรอกข้อมูล */
+            padding: 20px; /* ปรับขนาด padding */
+            margin-bottom: 10px; /* ระยะห่างของช่องกรอกข้อมูล */
+            border-radius: 50px; /* ทำให้มีเส้นโค้งรอบขอบ */
+            border: 1px solid #ccc ; /* เส้นขอบ */
+            background-color: #1b1a1b; /* สีพื้นหลังของช่องกรอกข้อมูล */
+            color: #ccc;
+            position: absolute;
+            left: 208px;
+            bottom: -26.5px;
+            cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #58595a; /* สี*/
+    }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <h2>Login Account</h2>
+        <form method="POST" action="01.php">
+        <img src="login.png" alt="Login Image"> <!-- เปลี่ยน 'your_image.jpg' เป็นที่อยู่ของรูปภาพที่คุณต้องการใช้ -->
+        <form id="loginForm" onsubmit="saveData()" action="nextpage.html" method="GET">
+                <input type="text" id="name" name="name" required>
+                <input type="Email" id="Email" name="Email" required>
+                <input type="submit" value="login">
+            </form>    
+    </div>
+
+</body>
+</html>
